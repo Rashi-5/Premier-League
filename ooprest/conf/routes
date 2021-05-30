@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /sortedPointsList               controllers.PremierLeagueController.orderOfPoints()
+GET     /sortedGoalsList                controllers.PremierLeagueController.orderOfGoals()
+GET     /sortedWinsList                 controllers.PremierLeagueController.orderOfWins()
+GET     /randomMatchList                controllers.PremierLeagueController.randomMatch()
+GET     /matchHistory                   controllers.PremierLeagueController.matchHistory()
+GET     /searchDate                     controllers.PremierLeagueController.searchMatch(date: String)
+
+#http://localhost:9000/searchDate?date=2020-12-05
+# An example route (Prefix all API routes with apiPrefix defined in application.conf)
+#GET     /api/summary                controllers.HomeController.appSummary
+
+# Serve static assets under public directory
+
+
+# Test post request
+#POST    /api/postTest               controllers.HomeController.postTest()

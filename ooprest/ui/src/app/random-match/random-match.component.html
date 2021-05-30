@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <style>
+    .nav{
+      width:100%;
+      float:right;
+    }
+    .striped{
+      padding:2%;
+    }
+  </style>
+</head>
+<body>
+<div class="striped">
+
+  <table>
+    <tr>
+      <th>Club Name</th>
+      <th>Location</th>
+      <th>Wins</th>
+      <th>Draws</th>
+      <th>Defeats</th>
+      <th>G Scored</th>
+      <th>G Received</th>
+      <th>Matches Played </th>
+      <th>Points</th>
+      <th>G Difference</th>
+    </tr>
+    <tr *ngFor = "let i of randomMatch">
+      <td>{{i.nameOfTheClub}}</td>
+      <td>{{i.locationOfTheClub}}</td>
+      <td>{{i.numberOfWins}}</td>
+      <td>{{i.numberOfDraws}}</td>
+      <td>{{i.numberOfDefeats}}</td>
+      <td>{{i.numberOfGoalsScored}}</td>
+      <td>{{i.numberOfGoalsReceived}}</td>
+      <td>{{i.numberOfMatchesPlayed}}</td>
+      <td>{{i.numberOfCurrentPoints}}</td>
+      <td>{{i.goalDifference}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="nav">
+  <button class="waves-effect purple btn" id= "button" (click)="generateRandomMatch()">  Generate Match  </button>
+
+  <a class="waves-effect purple btn" id = "button" routerLink = "/matchHistory" routerActive="active"> Match History </a>
+
+  <a class="waves-effect purple btn" id = "button" routerLink = "/leagueTable" routerActive="active"> League Table </a>
+</div>
+</body>
+</html>
+
+

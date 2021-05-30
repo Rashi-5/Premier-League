@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #button{
+      float: right;
+    }
+    #clickButton{
+      margin: 2%;
+    }
+    #input{
+      width: 20%;
+      padding-left: 2%;
+    }
+  </style>
+</head>
+<body>
+<div class="striped">
+
+  <table border="2" cellspacing= "2">
+    <tr>
+      <th>Date</th>
+      <th>First club</th>
+      <th>Second club</th>
+      <th>Status</th>
+    </tr>
+
+    <tr *ngFor = "let f of matchByDate">
+      <td>{{f.date}}</td>
+      <td>{{f.team01}}</td>
+      <td>{{f.team02}}</td>
+      <td>{{f.status}}</td>
+    </tr>
+  </table>
+</div>
+<input #inputDate type="text" id="input" placeholder="yyyy-mm-dd">
+<button class="waves-effect purple btn" id= "clickButton"(click)="findMatchByDate(inputDate.value)">  Search Match  </button>
+
+<a class="waves-effect purple btn" id = "button" routerLink = "/matchHistory" routerActive="active"> Match History </a>
+
+<a id = "button" class="waves-effect purple btn" routerLink = "/leagueTable" routerActive="active"> League Table </a>
+</body>
+</html>
+
